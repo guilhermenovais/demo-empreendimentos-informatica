@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { AppProvider } from './context/AppContext'
 import EstablishmentLayout from './layouts/EstablishmentLayout'
 import ConsumerLayout from './layouts/ConsumerLayout'
@@ -13,7 +13,7 @@ import MyReservations from './pages/consumer/MyReservations'
 export default function App() {
   return (
     <AppProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<RoleSelect />} />
 
@@ -33,7 +33,7 @@ export default function App() {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AppProvider>
   )
 }
